@@ -64,7 +64,7 @@ body, button {
     display: flex;
     flex-direction: column;
     transition: background-color 1s ease;
-    /*background-color: rgba(0, 0, 0, 0.5);*/
+    background-color: rgba(0, 0, 0, 0) !important;
     -webkit-user-select: none;
 }
 
@@ -78,7 +78,7 @@ body, button {
 /* Flexbox to wrap the main frame content. */
 #frameMain {
     display: flex;
-    height: 20px
+    height: 28px
 }
 
 /* Undraggable region on the left and right of the frame. */
@@ -107,6 +107,8 @@ body, button {
 /* Frame logo (windows only). */
 #frameTitleDock {
     padding: 0px 10px;
+    display: inline-flex;
+    align-items: center;
 }
 #frameTitleText {
     font-size: 14px;
@@ -120,7 +122,7 @@ body, button {
     position: relative;
     top: -2px;
     right: -2px;
-    height: 22px;
+    height: 30px;
 }
 #frameButtonDockWin > .frameButton:not(:first-child) {
     margin-left: -4px;
@@ -138,16 +140,16 @@ body, button {
 .frameButton {
     background: none;
     border: none;
-    height: 22px;
+    height: 30px;
     width: 39px;
     cursor: pointer;
 }
 .frameButton:hover,
 .frameButton:focus {
-    background: rgba(189, 189, 189, 0.43);
+    background: rgba(189, 189, 189);
 }
 .frameButton:active {
-    background: rgba(156, 156, 156, 0.43);
+    background: rgba(156, 156, 156);
 }
 .frameButton:focus {
     outline: 0px;
@@ -156,10 +158,10 @@ body, button {
 /* Close button is red. */
 #frameButton_close:hover,
 #frameButton_close:focus {
-    background: rgba(255, 53, 53, 0.61) !important;
+    background: rgba(255, 53, 53) !important;
 }
 #frameButton_close:active {
-    background: rgba(235, 0, 0, 0.61) !important;
+    background: rgba(235, 0, 0) !important;
 }
 
 /* Darwin Frame Button Styles. */
@@ -222,7 +224,7 @@ body, button {
     align-items: center;
     height: 100%;
     width: 100%;
-    background: rgba(0, 0, 0, 0.50);
+    /*background: rgba(0, 0, 0, 0.50);*/
 }
 
 #welcomeContent {
@@ -385,7 +387,7 @@ body, button {
     height: 100%;
     width: 100%;
     transition: filter 0.25s ease;
-    background: rgba(0, 0, 0, 0.50);
+    /*background: rgba(0, 0, 0, 0.50);*/
 }
 
 /* Login cancel button styles. */
@@ -887,7 +889,7 @@ body, button {
     height: 100%;
     width: 100%;
     transition: filter 0.25s ease;
-    background: rgba(0, 0, 0, 0.50);
+    /*background: rgba(0, 0, 0, 0.50);*/
 }
 
 #waitingContent {
@@ -966,7 +968,7 @@ body, button {
     height: 100%;
     width: 100%;
     transition: filter 0.25s ease;
-    background: rgba(0, 0, 0, 0.50);
+    /*/*background: rgba(0, 0, 0, 0.50);*/*/
 }
 
 #loginOptionsContent {
@@ -3510,7 +3512,7 @@ input:checked + .toggleSwitchSlider:before {
     justify-content: center;
     width: 100%;
     height: calc(100% - 22px);
-    background: rgba(0, 0, 0, 0.50);
+    /*background: rgba(0, 0, 0, 0.50);*/
 }
 
 /* Main overlay content. */
