@@ -1,10 +1,10 @@
 <div id="loginContainer" style="display: none;">
-    <div id="loginCancelContainer" style="display: none;">
+    <!--<div id="loginCancelContainer" style="display: none;">
         <button id="loginCancelButton">
             <div id="loginCancelIcon">X</div>
             <span id="loginCancelText"><%- lang('login.loginCancelText') %></span>
         </button>
-    </div>
+    </div>-->
     <div id="loginContent">
         <form id="loginForm">
             <!--<span id="loginSubheader"><%- lang('login.loginSubheader') %></span>-->
@@ -39,12 +39,12 @@
             <button id="loginButton" disabled>
                 <div id="loginButtonContent">
                     <%- lang('login.loginButtonText') %>
-                    <svg id="loginSVG" viewBox="0 0 24.87 13.97">
+                    <!--<svg id="loginSVG" viewBox="0 0 24.87 13.97">
                         <defs>
                             <style>.arrowLine{fill:none;stroke:#FFF;stroke-width:2px;transition: 0.25s ease;}</style>
                         </defs>
                         <polyline class="arrowLine" points="0.71 13.26 12.56 1.41 24.16 13.02"/>
-                    </svg>
+                    </svg>-->
                     <div class="circle-loader">
                         <div class="checkmark draw"></div>
                     </div>
@@ -60,5 +60,17 @@
             </div>-->
         </form>
     </div>
+    <div class="loginOptionButtonContainer">
+        <button id="loginOptionMicrosoft" class="loginOptionButton">
+            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 23 23">
+                <path fill="#f35325" d="M1 1h10v10H1z" />
+                <path fill="#81bc06" d="M12 1h10v10H12z" />
+                <path fill="#05a6f0" d="M1 12h10v10H1z" />
+                <path fill="#ffba08" d="M12 12h10v10H12z" />
+            </svg>
+            <span><%- lang('loginOptions.loginWithMicrosoft') %></span>
+        </button>
+    </div>
     <script src="./assets/js/scripts/login.js"></script>
+    <script src="./assets/js/scripts/loginOptions.js"></script>
 </div>

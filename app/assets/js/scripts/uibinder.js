@@ -87,9 +87,9 @@ async function showMainUI(data){
             } else {
                 loginOptionsCancelEnabled(false)
                 loginOptionsViewOnLoginSuccess = VIEWS.landing
-                loginOptionsViewOnLoginCancel = VIEWS.loginOptions
-                currentView = VIEWS.loginOptions
-                $(VIEWS.loginOptions).fadeIn(1000)
+                loginOptionsViewOnLoginCancel = VIEWS.login
+                currentView = VIEWS.login
+                $(VIEWS.login).fadeIn(1000)
             }
 
 
