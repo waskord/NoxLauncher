@@ -9,7 +9,6 @@ const loginCancelContainer  = document.getElementById('loginCancelContainer')
 const loginCancelButton     = document.getElementById('loginCancelButton')
 const loginUsername         = document.getElementById('loginUsername')
 const checkmarkContainer    = document.getElementById('checkmarkContainer')
-const loginRememberOption   = document.getElementById('loginRememberOption')
 const loginButton           = document.getElementById('loginButton')
 const loginForm             = document.getElementById('loginForm')
 
@@ -105,12 +104,6 @@ function formDisabled(v){
     loginDisabled(v)
     loginCancelButton.disabled = v
     loginUsername.disabled = v
-    if(v){
-        checkmarkContainer.setAttribute('disabled', v)
-    } else {
-        checkmarkContainer.removeAttribute('disabled')
-    }
-    loginRememberOption.disabled = v
 }
 
 let loginViewOnSuccess = VIEWS.landing
@@ -148,27 +141,22 @@ loginButton.addEventListener('click', () => {
     loginLoading(true)
 
     AuthManager.addOfflineAccount(loginUsername.value).then((value) => {
-        updateSelectedAccount(value)
         loginButton.innerHTML = loginButton.innerHTML.replace(Lang.queryJS('login.loggingIn'), Lang.queryJS('login.success'))
         $('.circle-loader').toggleClass('load-complete')
-        $('.checkmark').toggle()
-        setTimeout(() => {
-            switchView(VIEWS.login, loginViewOnSuccess, 500, 500, async () => {
-                // Temporary workaround
-                if(loginViewOnSuccess === VIEWS.settings){
-                    await prepareSettings()
-                }
-                loginViewOnSuccess = VIEWS.landing // Reset this for good measure.
-                loginCancelEnabled(false) // Reset this for good measure.
-                loginViewCancelHandler = null // Reset this for good measure.
-                loginUsername.value = ''
-                $('.circle-loader').toggleClass('load-complete')
-                $('.checkmark').toggle()
-                loginLoading(false)
-                loginButton.innerHTML = loginButton.innerHTML.replace(Lang.queryJS('login.success'), Lang.queryJS('login.login'))
-                formDisabled(false)
-            })
-        }, 1000)
+        switchView(VIEWS.login, loginViewOnSuccess, 500, 500, async () => {
+            // Temporary workaround
+            if(loginViewOnSuccess === VIEWS.settings){
+                await prepareSettings()
+            }
+            loginViewOnSuccess = VIEWS.landing // Reset this for good measure.
+            loginCancelEnabled(false) // Reset this for good measure.
+            loginViewCancelHandler = null // Reset this for good measure.
+            loginUsername.value = ''
+            $('.circle-loader').toggleClass('load-complete')
+            loginLoading(false)
+            loginButton.innerHTML = loginButton.innerHTML.replace(Lang.queryJS('login.success'), Lang.queryJS('login.login'))
+            formDisabled(false)
+        })
     }).catch((displayableError) => {
         loginLoading(false)
 

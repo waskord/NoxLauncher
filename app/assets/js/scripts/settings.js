@@ -343,7 +343,7 @@ const msftLoginLogger = LoggerUtil.getLogger('Microsoft Login')
 const msftLogoutLogger = LoggerUtil.getLogger('Microsoft Logout')
 
 // Bind the add mojang account button.
-document.getElementById('settingsAddMojangAccount').onclick = (e) => {
+document.getElementById('settingsAddOfflineAccount').onclick = (e) => {
     switchView(getCurrentView(), VIEWS.login, 500, 500, () => {
         loginViewOnCancel = VIEWS.settings
         loginViewOnSuccess = VIEWS.settings
@@ -415,7 +415,6 @@ ipcRenderer.on(MSFT_OPCODE.REPLY_LOGIN, (_, ...arguments_) => {
 
             const authCode = queryMap.code
             AuthManager.addMicrosoftAccount(authCode).then(value => {
-                updateSelectedAccount(value)
                 switchView(getCurrentView(), viewOnClose, 500, 500, async () => {
                     await prepareSettings()
                 })
@@ -523,7 +522,6 @@ function processLogOut(val, isLastAccount){
             if(!isLastAccount && uuid === prevSelAcc.uuid){
                 const selAcc = ConfigManager.getSelectedAccount()
                 refreshAuthAccountSelected(selAcc.uuid)
-                updateSelectedAccount(selAcc)
                 validateSelectedAccount()
             }
             if(isLastAccount) {
@@ -574,7 +572,6 @@ ipcRenderer.on(MSFT_OPCODE.REPLY_LOGOUT, (_, ...arguments_) => {
                 if(!isLastAccount && uuid === prevSelAcc.uuid){
                     const selAcc = ConfigManager.getSelectedAccount()
                     refreshAuthAccountSelected(selAcc.uuid)
-                    updateSelectedAccount(selAcc)
                     validateSelectedAccount()
                 }
                 if(isLastAccount) {

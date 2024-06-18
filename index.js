@@ -227,16 +227,26 @@ let win
 function createWindow() {
 
     win = new BrowserWindow({
-        width: 980,
-        height: 552,
         icon: getPlatformIcon('SealCircle'),
+        // Отключение полноэкранного режима
+        fullscreenable: false,
+        // 
+        width: 480,
+        maxWidth: 480,
+        minWidth: 480,
+        //
+        height: 480,
+        maxHeight: 480,
+        minHeight: 480,
+        //
+        transparent: true,
         frame: false,
+
         webPreferences: {
             preload: path.join(__dirname, 'app', 'assets', 'js', 'preloader.js'),
             nodeIntegration: true,
             contextIsolation: false
         },
-        backgroundColor: '#171614'
     })
     remoteMain.enable(win.webContents)
 

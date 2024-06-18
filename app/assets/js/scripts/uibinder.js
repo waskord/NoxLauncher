@@ -16,10 +16,10 @@ let fatalStartupError = false
 // Mapping of each view to their container IDs.
 const VIEWS = {
     landing: '#landingContainer',
-    loginOptions: '#loginOptionsContainer',
+    // loginOptions: '#loginOptionsContainer',
     login: '#loginContainer',
     settings: '#settingsContainer',
-    welcome: '#welcomeContainer',
+ //   welcome: '#welcomeContainer',
     waiting: '#waitingContainer'
 }
 
@@ -66,40 +66,29 @@ async function showMainUI(data){
 
     await prepareSettings(true)
     updateSelectedServer(data.getServerById(ConfigManager.getSelectedServer()))
-    refreshServerStatus()
+
+    // Показ #main
+    $('#main').show()
+
+    // Проверка, залогинен ли игрок или нет
+    const isLoggedIn = Object.keys(ConfigManager.getAuthAccounts()).length > 0
+
+    // Отображение нужного экрана
+    if(isLoggedIn){
+        currentView = VIEWS.landing
+        $(VIEWS.landing).fadeIn(500)
+    } else {
+        currentView = VIEWS.login
+        $(VIEWS.login).fadeIn(500)
+    }
+
+    // Хз
     setTimeout(() => {
-        document.getElementById('frameBar').style.backgroundColor = 'rgba(0, 0, 0, 0.5)'
-        document.body.style.backgroundImage = `url('assets/images/backgrounds/${document.body.getAttribute('bkid')}.jpg')`
-        $('#main').show()
-
-        const isLoggedIn = Object.keys(ConfigManager.getAuthAccounts()).length > 0
-
-        // If this is enabled in a development environment we'll get ratelimited.
-        // The relaunch frequency is usually far too high.
-        if(!isDev && isLoggedIn){
-            validateSelectedAccount()
-        }
-
-
-            if(isLoggedIn){
-                currentView = VIEWS.landing
-                $(VIEWS.landing).fadeIn(1000)
-            } else {
-                loginOptionsCancelEnabled(false)
-                loginOptionsViewOnLoginSuccess = VIEWS.landing
-                loginOptionsViewOnLoginCancel = VIEWS.login
-                currentView = VIEWS.login
-                $(VIEWS.login).fadeIn(1000)
-            }
-
-
-        setTimeout(() => {
-            $('#loadingContainer').fadeOut(500, () => {
-                $('#loadSpinnerImage').removeClass('rotating')
-            })
-        }, 0)
+        $('#loadingContainer').fadeOut(500, () => {
+            $('#loadSpinnerImage').removeClass('rotating')
+        })
+       }, 0)
         
-    }, 0)
     // Disable tabbing to the news container.
     initNews().then(() => {
         $('#newsContainer *').attr('tabindex', '-1')
@@ -350,7 +339,7 @@ async function validateSelectedAccount(){
                 }
                 
                 loginOptionsViewOnLoginSuccess = getCurrentView()
-                loginOptionsViewOnLoginCancel = VIEWS.loginOptions
+                loginOptionsViewOnLoginCancel = VIEWS.login
 
                 if(accLen > 0) {
                     loginOptionsViewOnCancel = getCurrentView()

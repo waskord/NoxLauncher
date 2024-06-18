@@ -64,7 +64,6 @@ body, button {
     display: flex;
     flex-direction: column;
     transition: background-color 1s ease;
-    background-color: rgba(0, 0, 0, 0) !important;
     -webkit-user-select: none;
 }
 
@@ -968,7 +967,7 @@ body, button {
     height: 100%;
     width: 100%;
     transition: filter 0.25s ease;
-    /*/*background: rgba(0, 0, 0, 0.50);*/*/
+    /*background: rgba(0, 0, 0, 0.50);*/
 }
 
 #loginOptionsContent {
