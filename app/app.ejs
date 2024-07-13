@@ -4,45 +4,41 @@
     <title><%= lang('app.title') %></title>
     <script src="./assets/js/scripts/uicore.js"></script>
     <script src="./assets/js/scripts/uibinder.js"></script>
-    <link type="text/css" rel="stylesheet" href="./assets/css/launcher.css">
+    <link type="text/css" rel="stylesheet" href="./assets/css/old.css"> <!-- Основное (старое, что изначально было) -->
+    <link type="text/css" rel="stylesheet" href="./assets/css/launcher.css"> <!-- Основное -->
+    <link type="text/css" rel="stylesheet" href="./assets/css/auth.css"> <!-- Авторизация (login.ejs) -->
+    <link type="text/css" rel="stylesheet" href="./assets/css/landing.css"> <!-- Главная страница (landing.ejs) -->
+    <link type="text/css" rel="stylesheet" href="./assets/css/frame.css"> <!-- Фрэйм (frame.ejs) -->
     <style>
         body {
-            /*background: url('assets/images/backgrounds/<%=bkid%>.jpg') no-repeat center center fixed;*/
-            /*transition: background-image 1s ease;*/
-            /* background-image: url('data:image/jpeg;base64,/9j/4AAQSkZJRgABAQEAYABgAAD//gA+Q1JFQVRPUjogZ2QtanBlZyB2MS4wICh1c2luZyBJSkcgSlBFRyB2ODApLCBkZWZhdWx0IHF1YWxpdHkK/9sAQwAIBgYHBgUIBwcHCQkICgwUDQwLCwwZEhMPFB0aHx4dGhwcICQuJyAiLCMcHCg3KSwwMTQ0NB8nOT04MjwuMzQy/9sAQwEJCQkMCwwYDQ0YMiEcITIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIy/8AAEQgAPwBwAwEiAAIRAQMRAf/EAB8AAAEFAQEBAQEBAAAAAAAAAAABAgMEBQYHCAkKC//EALUQAAIBAwMCBAMFBQQEAAABfQECAwAEEQUSITFBBhNRYQcicRQygZGhCCNCscEVUtHwJDNicoIJChYXGBkaJSYnKCkqNDU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6g4SFhoeIiYqSk5SVlpeYmZqio6Slpqeoqaqys7S1tre4ubrCw8TFxsfIycrS09TV1tfY2drh4uPk5ebn6Onq8fLz9PX29/j5+v/EAB8BAAMBAQEBAQEBAQEAAAAAAAABAgMEBQYHCAkKC//EALURAAIBAgQEAwQHBQQEAAECdwABAgMRBAUhMQYSQVEHYXETIjKBCBRCkaGxwQkjM1LwFWJy0QoWJDThJfEXGBkaJicoKSo1Njc4OTpDREVGR0hJSlNUVVZXWFlaY2RlZmdoaWpzdHV2d3h5eoKDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uLj5OXm5+jp6vLz9PX29/j5+v/aAAwDAQACEQMRAD8A8VooopDCiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKAP/9k=');*/
-            background-size: cover;
             -webkit-user-select: none;
-            height: 480px;
-            width: 480px;
+            height: 100%;
+            width: 100%;
             overflow: hidden;
 
-            border-radius: 15px;
-            border: #2A2A2C, 2px;
-            background-color: #19191D;
+            box-sizing: border-box;
+
+            border-radius: var(--border-radius);
+            border: var(--1) solid 2px;
+            background-color: var(--0); 
         }
         #main {
-            border-radius: 15px;
-            border: #2A2A2C, 2px;
-            background-color: #19191D;
-
-            width: 100%;
-            height: 100%;
+            padding: 10px 30px 30px 30px;
+            width: -webkit-fill-available;
+            height: -webkit-fill-available;
             display: none;
             position: absolute;
             z-index: 10;
-        }
-        #main[overlay] {
-            filter: brightness(0.3);
         }
     </style>
 </head>
 <body>
     <%- include('frame') %>
     <div id="main">
+        <%- include('landing') %>
+        <%- include('settings') %>
         <%- include('login') %>
         <%- include('waiting') %>
-        <%- include('settings') %>
-        <%- include('landing') %>
     </div>
     <%- include('overlay') %>
 

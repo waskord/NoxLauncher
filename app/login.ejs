@@ -1,37 +1,44 @@
-<div id="loginContainer" style="display: none; border-radius: 25px;">
+<div id="loginContainer" style="display: none;">
+    <!-- Заголовок -->
+    <h1 class="loginTitle"><%- lang('login.loginTitle') %></h1>
+
+    <!-- Вернуться назад 
+     Появляется только если человек добавляет аккаунт-->
     <div id="loginCancelContainer" style="display: none;">
         <button id="loginCancelButton">
             <div id="loginCancelIcon">X</div>
             <span id="loginCancelText"><%- lang('login.loginCancelText') %></span>
         </button>
     </div>
-    <div id="loginContent">
-        <form id="loginForm">
-            <div class="loginFieldContainer">
-                <span class="loginErrorSpan" id="loginEmailError"><%- lang('login.loginEmailError') %></span>
-                <input id="loginUsername" class="loginField" type="text" placeholder="<%- lang('login.loginEmailPlaceholder') %>"/>
+
+    <!-- Авторизация -->
+    <form id="loginForm">
+
+        <!-- Ввод никнейма -->
+        <div class="loginFieldContainer">
+            <div class="field-group">
+                <span id="loginEmailError" class="loginErrorSpan"><%- lang('login.loginEmailError') %></span>
+                <input id="loginUsername" class="loginField" type="text" placeholder="<%- lang('login.loginNamePlaceholder') %>"/>
             </div>
-            <button id="loginButton" disabled>
-                <div id="loginButtonContent">
-                    <%- lang('login.loginButtonText') %>
-                    <div class="circle-loader">
-                        <div class="checkmark draw"></div>
-                    </div>
-                </div>
-            </button>
-        </form>
+            <div class="field-group">
+                <span class="loginErrorSpan" id="loginPasswordError"><%- lang('login.loginPasswordError') %></span>
+                <input id="loginPassword" class="loginField" type="password" placeholder="<%- lang('login.loginPasswordPlaceholder') %>"/>
+            </div>
+        </div>
+
+    <div class="buttons">
+        <!-- Кнопка залогиниться -->
+        <button id="loginButton" class="customButton customButtonGreen" disabled><%- lang('login.loginButtonText') %></button>
+
+        <!-- Ссылки на создание аккаунта и на сброс пароля -->
+        <div class="auth-links">
+            <a href="https://account.ely.by/register">Создать аккаунт</a> 
+            /
+            <a href="https://account.ely.by/login">Забыл пароль</a>
+        </div>
+        
     </div>
-    <div class="loginOptionButtonContainer">
-        <button id="loginOptionMicrosoft" class="loginOptionButton">
-            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 23 23">
-                <path fill="#f35325" d="M1 1h10v10H1z" />
-                <path fill="#81bc06" d="M12 1h10v10H12z" />
-                <path fill="#05a6f0" d="M1 12h10v10H1z" />
-                <path fill="#ffba08" d="M12 12h10v10H12z" />
-            </svg>
-            <span><%- lang('loginOptions.loginWithMicrosoft') %></span>
-        </button>
-    </div>
+    </form>
+
     <script src="./assets/js/scripts/login.js"></script>
-    <script src="./assets/js/scripts/loginOptions.js"></script>
 </div>

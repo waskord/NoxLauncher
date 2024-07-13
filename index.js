@@ -130,7 +130,7 @@ ipcMain.on(MSFT_OPCODE.OPEN_LOGIN, (ipcEvent, ...arguments_) => {
         width: 520,
         height: 600,
         frame: true,
-        icon: getPlatformIcon('SealCircle')
+        icon: getPlatformIcon('icon')
     })
 
     msftAuthWindow.on('closed', () => {
@@ -183,7 +183,7 @@ ipcMain.on(MSFT_OPCODE.OPEN_LOGOUT, (ipcEvent, uuid, isLastAccount) => {
         width: 520,
         height: 600,
         frame: true,
-        icon: getPlatformIcon('SealCircle')
+        icon: getPlatformIcon('icon')
     })
 
     msftLogoutWindow.on('closed', () => {
@@ -227,18 +227,19 @@ let win
 function createWindow() {
 
     win = new BrowserWindow({
-        icon: getPlatformIcon('SealCircle'),
+        // Иконка основному окну
+        icon: getPlatformIcon('icon'),
         // Отключение полноэкранного режима
         fullscreenable: false,
-        // 
+        // Ширина
         width: 480,
         maxWidth: 480,
         minWidth: 480,
-        //
-        height: 480,
-        maxHeight: 480,
-        minHeight: 480,
-        //
+        // Высота
+        height: 528,
+        maxHeight: 528,
+        minHeight: 528,
+        // Прозрачность (Для скругление) и отключение системного фрэйма
         transparent: true,
         frame: false,
 

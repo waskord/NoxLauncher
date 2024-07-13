@@ -1,0 +1,29 @@
+<div id="loginContainer" style="display: none;">
+    <!-- Заголовок -->
+    <h1 class="loginTitle"><%- lang('login.loginTitle') %></h1>
+
+    <!-- Вернуться назад 
+     Появляется только если человек добавляет аккаунт-->
+    <div id="loginCancelContainer" style="display: none;">
+        <button id="loginCancelButton">
+            <div id="loginCancelIcon">X</div>
+            <span id="loginCancelText"><%- lang('login.loginCancelText') %></span>
+        </button>
+    </div>
+
+    <!-- Авторизация -->
+    <form id="loginForm">
+
+        <!-- Ввод никнейма -->
+        <div class="loginFieldContainer">
+            <span id="loginEmailError" class="loginErrorSpan"><%- lang('login.loginEmailError') %></span>
+            <input id="loginUsername" class="loginField" type="text" placeholder="<%- lang('login.loginNamePlaceholder') %>"/>
+        </div>
+
+        <!-- Кнопка залогиниться -->
+        <button id="loginButton" class="customButton customButtonGreen" disabled><%- lang('login.loginButtonText') %></button>
+
+    </form>
+
+    <script src="./assets/js/scripts/login.js"></script>
+</div>

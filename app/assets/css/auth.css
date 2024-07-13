@@ -1,0 +1,118 @@
+/*******************************************************************************
+ *                                                                             *
+ * Стили для экрана авторизации (login.ejs)                                    *
+ *                                                                             *
+ ******************************************************************************/
+
+
+
+:root {
+    --gap-auth-fields: 15px;
+    --gap-auth-buttons: 15px;
+    --gap-auth-links: 10px;
+}
+
+
+
+#loginContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+/*
+    width: 100%;
+    height: 100%;
+
+    gap: var(--gap);*/
+}
+
+/* Login form. */
+#loginForm {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: var(--gap);
+    width: 100%;
+} 
+
+.field-group {
+    width: -webkit-fill-available;
+}
+
+.buttons {
+    display: flex;
+
+    flex-direction: column;
+    gap: var(--gap-auth-buttons);
+
+    width: -webkit-fill-available;
+}
+
+
+
+.auth-links {
+    display: flex;
+
+    flex-direction: row;
+    gap: var(--gap-auth-links);
+
+    color: var(--1_5);
+}
+
+.auth-links a {
+    color: var(--1_5);  
+}
+
+a:hover {
+    color: var(--green-hover-button);
+}
+
+a:focus, a:active {
+    color: var(--green-active-focus-button);
+}
+
+
+
+.loginErrorSpan {
+    font-size: var(--font-size-error-auth);
+    font-family: var(--font-error-auth);
+    color: var(--red);
+    width: 100%;
+    text-align: left;
+    position: absolute;
+    top: -25px;
+    opacity: 0;
+    transition: 0.25s ease;
+}
+
+.loginFieldContainer {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    gap: var(--gap-auth-fields);
+}
+
+
+
+
+/* Login button styles. */
+#loginButton {
+    background: var(--green);
+}
+#loginButton:disabled {
+    background-color: var(--green-disabled-button);
+    color: var(--green-disabled-button-text);
+    pointer-events: none;
+    
+}
+#loginButton:hover {
+    background-color: var(--green-hover-button);
+}
+
+#loginButton:active {
+    background-color: var(--green-active-focus-button);
+}

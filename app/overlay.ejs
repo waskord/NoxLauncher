@@ -1,18 +1,27 @@
 <div id="overlayContainer" style="display: none;">
+
     <div id="serverSelectContent" style="display: none;">
-        <span id="serverSelectHeader"><%- lang('overlay.serverSelectHeader') %></span>
-        <div id="serverSelectList">
-            <div id="serverSelectListScrollable">
-                <!-- Server listings populated here. -->
+        В разработке    
+        <button id="serverSelectCancel">Закрыть</button>
+
+        <div style="display: none;">
+            <span id="serverSelectHeader"><%- lang('overlay.serverSelectHeader') %></span>
+            <div id="serverSelectList">
+                <div id="serverSelectListScrollable">
+                </div>
+            </div>
+            <div id="serverSelectActions">
+                <button id="serverSelectConfirm" class="overlayKeybindEnter" type="submit"><%- lang('overlay.serverSelectConfirm') %></button>
+                <div id="serverSelectCancelWrapper">
+                    <button id="serverSelectCancel" class="overlayKeybindEsc"><%- lang('overlay.serverSelectCancel') %></button>
+                </div>
             </div>
         </div>
-        <div id="serverSelectActions">
-            <button id="serverSelectConfirm" class="overlayKeybindEnter" type="submit"><%- lang('overlay.serverSelectConfirm') %></button>
-            <div id="serverSelectCancelWrapper">
-                <button id="serverSelectCancel" class="overlayKeybindEsc"><%- lang('overlay.serverSelectCancel') %></button>
-            </div>
-        </div>
-    </div>
+
+    </div> 
+
+
+
     <div id="accountSelectContent" style="display: none;">
         <span id="accountSelectHeader"><%- lang('overlay.accountSelectHeader') %></span>
         <div id="accountSelectList">
@@ -27,15 +36,114 @@
             </div>
         </div>
     </div>
-    <div id="overlayContent">
-        <span id="overlayTitle">Lorem Ipsum:<br>Finis Illud</span>
-        <span id="overlayDesc">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud..</span>
-        <div id="overlayActionContainer">
-            <button id="overlayAcknowledge" class="overlayKeybindEnter">Conare Iterum</button>
+
+
+
+    <div class="overlayUp">
+        <div class="object-group">
+            <span id="overlayTitle">Ошибка запуска</span>
+            <span id="overlayDesc">Загляните в консоль (CTRL + Shift + i) для больших деталей</span>
+        </div>
+                <button id="overlayAcknowledge" class="svgButton">
+                    <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M2 2L11 11M20 20L11 11M11 11L2 20L20 2" stroke="#ACACAC" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+                </button>
+            </div>
+                <div id="overlayActionContainer" class="object-group" style="
+            display: none;
+        ">
+                    
+                    <div id="overlayDismissWrapper">
+                        <button id="overlayDismiss" class="customButton">Dismiss</button>
+                    </div>
+                </div>
+
+    <script src="./assets/js/scripts/overlay.js"></script>
+</div>
+
+
+
+
+
+<div id="overlayContainer" style="display: none;">
+
+    <div class="overlayContent" style="">
+    <div class="overlayUp">
+<div class="object-group">
+        <span id="overlayTitle">Ошибка запуска</span>
+        <span id="overlayDesc">Загляните в консоль (CTRL + Shift + i) для больших деталей</span>
+</div>
+        <button id="overlayAcknowledge" class="svgButton"><svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M2 2L11 11M20 20L11 11M11 11L2 20L20 2" stroke="#ACACAC" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+</button>
+    </div>
+        <div id="overlayActionContainer" class="object-group" style="
+    display: none;
+">
+            
             <div id="overlayDismissWrapper">
-                <button id="overlayDismiss" style="display: none;" class="overlayKeybindEsc">Dismiss</button>
+                <button id="overlayDismiss" class="customButton">Dismiss</button>
+            </div>
+        </div>
+    </div><div id="serverSelectContent" style="display: none;">
+        В разработке
+        <button id="serverSelectCancel">Закрыть</button>
+
+        <div style="display: none;">
+            <span id="serverSelectHeader">Available Servers</span>
+            <div id="serverSelectList">
+                <div id="serverSelectListScrollable"><button class="serverListing" servid="Create-1.20.1" selected="">
+            <img class="serverListingImg" src="http://waskord.ru/images/clockcube.webp">
+            <div class="serverListingDetails">
+                <span class="serverListingName">Create 1.20.1</span>
+                <span class="serverListingDescription">Create Running Minecraft 1.20.1 (Fabric v0.15.11)</span>
+                <div class="serverListingInfo">
+                    <div class="serverListingVersion">1.20.1</div>
+                    <div class="serverListingRevision">1.0.0</div>
+                    <div class="serverListingStarWrapper">
+                        <svg id="Layer_1" viewBox="0 0 107.45 104.74" width="20px" height="20px">
+                            <defs>
+                                <style>.cls-1{fill:#fff;}.cls-2{fill:none;stroke:#fff;stroke-miterlimit:10;}</style>
+                            </defs>
+                            <path class="cls-1" d="M100.93,65.54C89,62,68.18,55.65,63.54,52.13c2.7-5.23,18.8-19.2,28-27.55C81.36,31.74,63.74,43.87,58.09,45.3c-2.41-5.37-3.61-26.52-4.37-39-.77,12.46-2,33.64-4.36,39-5.7-1.46-23.3-13.57-33.49-20.72,9.26,8.37,25.39,22.36,28,27.55C39.21,55.68,18.47,62,6.52,65.55c12.32-2,33.63-6.06,39.34-4.9-.16,5.87-8.41,26.16-13.11,37.69,6.1-10.89,16.52-30.16,21-33.9,4.5,3.79,14.93,23.09,21,34C70,86.84,61.73,66.48,61.59,60.65,67.36,59.49,88.64,63.52,100.93,65.54Z"></path>
+                            <circle class="cls-2" cx="53.73" cy="53.9" r="38"></circle>
+                        </svg>
+                        <span class="serverListingStarTooltip">Main Server</span>
+                    </div>
+                </div>
+            </div>
+        </button></div>
+            </div>
+            <div id="serverSelectActions">
+                <button id="serverSelectConfirm" class="overlayKeybindEnter" type="submit">Select</button>
+                <div id="serverSelectCancelWrapper">
+                    <button id="serverSelectCancel" class="overlayKeybindEsc">Cancel</button>
+                </div>
+            </div>
+        </div>
+        
+    </div> 
+
+
+
+    <div id="accountSelectContent" style="display: none;">
+        <span id="accountSelectHeader">Select an Account</span>
+        <div id="accountSelectList">
+            <div id="accountSelectListScrollable">
+                <!-- Accounts populated here. -->
+            </div>
+        </div>
+        <div id="accountSelectActions">
+            <button id="accountSelectConfirm" class="overlayKeybindEnter" type="submit">Select</button>
+            <div id="accountSelectCancelWrapper">
+                <button id="accountSelectCancel" class="overlayKeybindEsc">Cancel</button>
             </div>
         </div>
     </div>
-    <script src="./assets/js/scripts/overlay.js"></script>
+
+
+
+    
+
+    <script src="./assets/js/scripts/overlay.js" style="display: none;"></script>
 </div>

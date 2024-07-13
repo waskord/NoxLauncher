@@ -8,7 +8,6 @@ const validUsername = /^[a-zA-Z0-9_]{3,16}$/
 const loginCancelContainer  = document.getElementById('loginCancelContainer')
 const loginCancelButton     = document.getElementById('loginCancelButton')
 const loginUsername         = document.getElementById('loginUsername')
-const checkmarkContainer    = document.getElementById('checkmarkContainer')
 const loginButton           = document.getElementById('loginButton')
 const loginForm             = document.getElementById('loginForm')
 

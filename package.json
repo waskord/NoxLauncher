@@ -1,13 +1,13 @@
 {
-  "name": "clockcube-launcher",
-  "version": "2.2.1",
-  "productName": "ClockCube Launcher",
-  "description": "Launcher for ClockCube Create",
+  "name": "noxenth-launcher",
+  "version": "0.1.0",
+  "productName": "Noxenth",
+  "description": "Launcher for Create",
   "author": "Daniel Scalzi (https://github.com/dscalzi/) moddifed by waskord",
   "license": "UNLICENSED",
-  "homepage": "https://github.com/dscalzi/ClockCube-Launcher",
+  "homepage": "https://github.com/waskord/Noxenth-Launcher",
   "bugs": {
-    "url": "https://github.com/dscalzi/ClockCube-Launcher/issues"
+    "url": "https://github.com/waskord/Noxenth-Launcher/issues"
   },
   "private": true,
   "main": "index.js",

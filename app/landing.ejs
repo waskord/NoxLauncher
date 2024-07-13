@@ -1,33 +1,38 @@
 <div id="landingContainer" style="display: none;">
-    <div id="upper">
-        <div id="right">
-            <div id="rightContainer">
-                <div id="mediaContent">
-                    <div id="internalMedia">
-                        <div class="mediaContainer" id="settingsMediaContainer">
-                            <button class="mediaButton" id="settingsMediaButton">
-                                <svg id="settingsSVG" class="mediaSVG" viewBox="0 0 141.36 137.43">
-                                    <path d="M70.70475616319865,83.36934004916053 a15.320781354859122,15.320781354859122 0 1 1 14.454501310561755,-15.296030496450625 A14.850515045097694,14.850515045097694 0 0 1 70.70475616319865,83.36934004916053 M123.25082856443602,55.425620905968366 h-12.375429204248078 A45.54157947163293,45.54157947163293 0 0 0 107.21227231573047,46.243052436416285 l8.613298726156664,-9.108315894326587 a9.727087354538993,9.727087354538993 0 0 0 0,-13.167456673319956 l-3.465120177189462,-3.6631270444574313 a8.489544434114185,8.489544434114185 0 0 0 -12.375429204248078,0 l-8.613298726156664,9.108315894326587 A40.442902639482725,40.442902639482725 0 0 0 81.99114759747292,25.427580514871032 V12.532383284044531 a9.108315894326587,9.108315894326587 0 0 0 -8.811305593424633,-9.306322761594556 h-4.950171681699231 a9.108315894326587,9.108315894326587 0 0 0 -8.811305593424633,9.306322761594556 v12.895197230826497 a40.17064319698927,40.17064319698927 0 0 0 -9.331073620003052,4.0591407789933704 l-8.613298726156664,-9.108315894326587 a8.489544434114185,8.489544434114185 0 0 0 -12.375429204248078,0 L25.58394128451018,23.967279868769744 a9.727087354538993,9.727087354538993 0 0 0 0,13.167456673319956 L34.19724001066683,46.243052436416285 a45.07131316187151,45.07131316187151 0 0 0 -3.6631270444574313,9.083565035918088 h-12.375429204248078 a9.083565035918088,9.083565035918088 0 0 0 -8.811305593424633,9.306322761594556 v5.197680265784193 a9.108315894326587,9.108315894326587 0 0 0 8.811305593424633,9.306322761594556 h11.979415469712139 a45.69008462208391,45.69008462208391 0 0 0 4.0591407789933704,10.642869115653347 l-8.613298726156664,9.108315894326587 a9.727087354538993,9.727087354538993 0 0 0 0,13.167456673319956 l3.465120177189462,3.6631270444574313 a8.489544434114185,8.489544434114185 0 0 0 12.375429204248078,0 l8.613298726156664,-9.108315894326587 a40.49240435629971,40.49240435629971 0 0 0 9.331073620003052,4.0591407789933704 v12.895197230826497 a9.083565035918088,9.083565035918088 0 0 0 8.811305593424633,9.306322761594556 h4.950171681699231 A9.083565035918088,9.083565035918088 0 0 0 81.99114759747292,123.68848839660077 V110.79329116577425 a40.78941465720167,40.78941465720167 0 0 0 9.331073620003052,-4.0591407789933704 l8.613298726156664,9.108315894326587 a8.489544434114185,8.489544434114185 0 0 0 12.375429204248078,0 l3.465120177189462,-3.6631270444574313 a9.727087354538993,9.727087354538993 0 0 0 0,-13.167456673319956 l-8.613298726156664,-9.108315894326587 a45.665333763675406,45.665333763675406 0 0 0 4.034389920584874,-10.642869115653347 h12.004166328120636 a9.108315894326587,9.108315894326587 0 0 0 8.811305593424633,-9.306322761594556 v-5.197680265784193 a9.083565035918088,9.083565035918088 0 0 0 -8.811305593424633,-9.306322761594556 " id="svg_3" class=""/>
-                                </svg>
-                            </button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div id="lower">
+    <!-- Выбор сервера -->
+    <button id="server_selection_button" class="selection">
+        <span id="server_selection_name" class="selectionText"><%- lang('landing.launchButtonPlaceholder') %></span>
+        <span class="selectionButton">
+            <svg width="22" height="13" viewBox="0 0 22 13" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M2 11L9.51341 2.65177C10.3079 1.76901 11.6921 1.769 12.4866 2.65176L20 11" stroke="white" stroke-width="3" stroke-linecap="round"></path></svg>
+        </span>
+    </button>
+
+    <!-- Кнопки -->
+    <div class="object-group">
+        <!-- Играть -->
+        <button id="launch_button" class="customButton customButtonGreen">
+            <svg width="14" height="16" viewBox="0 0 14 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M4.08152 0.980975L12.383 6.31764C13.6076 7.10492 13.6076 8.89508 12.383 9.68236L4.08152 15.019C2.75049 15.8747 1 14.919 1 13.3367V2.66333C1 1.081 2.75049 0.125317 4.08152 0.980975Z" fill="white" stroke="white"></path></svg>
+            <%- lang('landing.launchButton') %>
+        </button>
+         <!-- Настройки -->
+        <button id="settingsMediaButton" class="customButton">
+            <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M10.6009 0.137016C10.2676 4.02331e-08 9.84505 0 8.99995 0C8.15485 0 7.7323 4.02331e-08 7.39903 0.137016C6.95461 0.319707 6.60153 0.670122 6.41745 1.11117C6.33342 1.31251 6.30053 1.54665 6.28766 1.88819C6.26876 2.39011 6.00939 2.8547 5.5711 3.10584C5.13281 3.35696 4.59772 3.34759 4.15029 3.11288C3.84581 2.95317 3.62505 2.86436 3.40734 2.83592C2.93043 2.7736 2.44811 2.90186 2.06649 3.19248C1.78028 3.41044 1.569 3.77361 1.14646 4.49994C0.723918 5.22627 0.512652 5.58943 0.465564 5.94442C0.402771 6.41772 0.532011 6.89639 0.824844 7.27515C0.958503 7.44804 1.14634 7.5933 1.43788 7.7751C1.86647 8.0424 2.14224 8.49771 2.14221 9C2.14218 9.50229 1.86642 9.95751 1.43788 10.2247C1.1463 10.4066 0.958422 10.552 0.824754 10.7248C0.531921 11.1036 0.40269 11.5822 0.465474 12.0555C0.512562 12.4105 0.723837 12.7737 1.14637 13.5C1.56891 14.2263 1.78019 14.5895 2.0664 14.8074C2.44802 15.098 2.93034 15.2263 3.40725 15.164C3.62495 15.1356 3.84569 15.0467 4.15015 14.8871C4.59762 14.6524 5.13274 14.643 5.57106 14.8941C6.00938 15.1453 6.26875 15.6099 6.28766 16.1119C6.30053 16.4534 6.33342 16.6875 6.41745 16.8889C6.60153 17.3299 6.95461 17.6803 7.39903 17.863C7.7323 18 8.15485 18 8.99995 18C9.84505 18 10.2676 18 10.6009 17.863C11.0453 17.6803 11.3984 17.3299 11.5824 16.8889C11.6665 16.6875 11.6994 16.4534 11.7123 16.1118C11.7312 15.6099 11.9905 15.1453 12.4288 14.8941C12.8671 14.6429 13.4022 14.6524 13.8497 14.8871C14.1542 15.0467 14.3748 15.1355 14.5926 15.1639C15.0695 15.2263 15.5518 15.098 15.9334 14.8074C16.2197 14.5894 16.4309 14.2263 16.8534 13.4999C17.276 12.7736 17.4872 12.4105 17.5344 12.0555C17.5971 11.5822 17.4679 11.1035 17.1751 10.7248C17.0414 10.5519 16.8535 10.4065 16.5619 10.2247C16.1334 9.95751 15.8577 9.5022 15.8577 8.99991C15.8577 8.49762 16.1334 8.04249 16.5619 7.77528C16.8536 7.59339 17.0414 7.44813 17.1752 7.27515C17.468 6.89646 17.5972 6.41778 17.5345 5.94447C17.4873 5.58949 17.2761 5.22633 16.8535 4.5C16.431 3.77367 16.2197 3.4105 15.9335 3.19254C15.5519 2.90192 15.0695 2.77366 14.5926 2.83598C14.3749 2.86442 14.1542 2.95322 13.8498 3.11292C13.4023 3.34763 12.8672 3.35702 12.4289 3.10586C11.9906 2.85472 11.7312 2.39009 11.7122 1.88815C11.6993 1.54663 11.6665 1.3125 11.5824 1.11117C11.3984 0.670122 11.0453 0.319707 10.6009 0.137016ZM8.99995 11.7C10.5025 11.7 11.7205 10.4912 11.7205 9C11.7205 7.50879 10.5025 6.3 8.99995 6.3C7.4974 6.3 6.27939 7.50879 6.27939 9C6.27939 10.4912 7.4974 11.7 8.99995 11.7Z" fill="white"></path></svg>
+            <%- lang('landing.settingsButton') %>
+        </button>
+    </div> 
+
+    <script src="./assets/js/scripts/landing.js"></script>
+</div>
+
+ <!--<div id="lower">
         <div id="right">
             <div class="bot_wrapper">
                 <div id="launch_content">
-                    <button id="launch_button"><%- lang('landing.launchButton') %></button>
-                    <div class="bot_divider"></div>
-                    <button id="server_selection_button" class="bot_label"><%- lang('landing.launchButtonPlaceholder') %></button>
+
                 </div>
                 <div id="launch_details">
                     <div id="launch_details_left">
                         <span id="launch_progress_label">0%</span>
-                        <div class="bot_divider"></div>
                     </div>
                     <div id="launch_details_right">
                         <progress id="launch_progress" value="22" max="100"></progress>
@@ -36,64 +41,4 @@
                 </div>
             </div>
         </div>
-    </div>
-    <div id="newsContainer">
-        <div id="newsContent" article="-1" style="display: none;">
-            <div id="newsStatusContainer">
-                <div id="newsStatusContent">
-                    <div id="newsTitleContainer">
-                        <a id="newsArticleTitle" href="#">Lorem Ipsum</a>
-                    </div>
-                    <div id="newsMetaContainer">
-                        <div id="newsArticleDateWrapper">
-                            <span id="newsArticleDate">Mar 15, 44 BC, 9:14 AM</span>
-                        </div>
-                        <div id="newsArticleAuthorWrapper">
-                            <span id="newsArticleAuthor">by Cicero</span>
-                        </div>
-                        <a href="#" id="newsArticleComments">0 Comments</a>
-                    </div>
-                </div>
-                <div id="newsNavigationContainer">
-                    <button id="newsNavigateLeft">
-                        <svg id="newsNavigationLeftSVG" viewBox="0 0 24.87 13.97">
-                            <defs>
-                                <style>.arrowLine{fill:none;stroke:#FFF;stroke-width:2px;transition: 0.25s ease;}</style>
-                            </defs>
-                            <polyline class="arrowLine" points="0.71 13.26 12.56 1.41 24.16 13.02"/>
-                        </svg>
-                    </button>
-                    <span id="newsNavigationStatus"><%- lang('landing.newsNavigationStatus', { currentPage: 1, totalPages: 1 }) %></span>
-                    <button id="newsNavigateRight">
-                        <svg id="newsNavigationRightSVG" viewBox="0 0 24.87 13.97">
-                            <defs>
-                                <style>.arrowLine{fill:none;stroke:#FFF;stroke-width:2px;transition: 0.25s ease;}</style>
-                            </defs>
-                            <polyline class="arrowLine" points="0.71 13.26 12.56 1.41 24.16 13.02"/>
-                        </svg>
-                    </button>
-                </div>
-            </div>
-            <div id="newsArticleContainer">
-                <div id="newsArticleContent">
-                    <div id="newsArticleContentScrollable">
-                        <!-- Article Content -->
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div id="newsErrorContainer">
-            <div id="newsErrorLoading">
-                <span id="nELoadSpan" class="newsErrorContent"><%- lang('landing.newsErrorLoadSpan') %></span>
-            </div>
-            <div id="newsErrorFailed" style="display: none;">
-                <span id="nEFailedSpan" class="newsErrorContent"><%- lang('landing.newsErrorFailedSpan') %></span>
-                <button id="newsErrorRetry"><%- lang('landing.newsErrorRetryButton') %></button>
-            </div>
-            <div id="newsErrorNone" style="display: none;">
-                <span id="nENoneSpan" class="newsErrorContent"><%- lang('landing.newsErrorNoneSpan') %></span>
-            </div>
-        </div>
-    </div>
-    <script src="./assets/js/scripts/landing.js"></script>
-</div>
+    </div>-->
