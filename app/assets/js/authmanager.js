@@ -9,7 +9,6 @@
  * @module authmanager
  */
 // Requirements
-const { v3: uuidv3 } = require('uuid')
 const ConfigManager          = require('./configmanager')
 const { LoggerUtil }         = require('helios-core')
 const { RestResponseStatus } = require('helios-core/common')
@@ -142,7 +141,10 @@ function mojangErrorDisplayable(errorCode) {
  */
 exports.addMojangAccount = async function(username, password) {
     try {
-        const response = await MojangRestAPI.authenticate(username, password, ConfigManager.getClientToken())
+        const response = await MojangRestAPI.authenticate(username, password, '123123')
+        console.log(username)
+        console.log(password)
+        console.log(ConfigManager.getClientToken())
         console.log(response)
         if(response.responseStatus === RestResponseStatus.SUCCESS) {
 
@@ -423,25 +425,4 @@ exports.validateSelected = async function(){
         return await validateSelectedMojangAccount()
     }
     
-}
-
-/**
- * Adds a offline account to the configured data base
- * The resultant data will be stored as an auth account in the
- * configuration database.
- * 
- * @param {string} username The account username.
- * @returns {Promise.<Object>} Promise which resolves the resolved authenticated account object.
- */
-exports.addOfflineAccount = async function(username) {
-    const ret = ConfigManager.addMojangAuthAccount(uuidv3(username, uuidv3.DNS), null, username, username)
-    ConfigManager.save()
-    return ret
-}
-
-
-exports.removeOfflineAccount = async function(uuid) {
-    ConfigManager.removeAuthAccount(uuid)
-    ConfigManager.save()
-    return Promise.resolve()
 }

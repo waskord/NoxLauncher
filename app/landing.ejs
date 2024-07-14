@@ -1,4 +1,25 @@
 <div id="landingContainer" style="display: none;">
+
+    <div id="lower">
+        <div id="right">
+            <div class="bot_wrapper">
+                <div id="launch_content">
+
+                </div>
+                <div id="launch_details">
+                    <div id="launch_details_left">
+                        <span id="launch_progress_label">0%</span>
+                    </div>
+                    <div id="launch_details_right">
+                        <progress id="launch_progress" value="22" max="100"></progress>
+                        <span id="launch_details_text" class="bot_label"><%- lang('landing.launchDetails') %></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
     <!-- Выбор сервера -->
     <button id="server_selection_button" class="selection">
         <span id="server_selection_name" class="selectionText"><%- lang('landing.launchButtonPlaceholder') %></span>
@@ -22,23 +43,7 @@
     </div> 
 
     <script src="./assets/js/scripts/landing.js"></script>
+
+
 </div>
 
- <!--<div id="lower">
-        <div id="right">
-            <div class="bot_wrapper">
-                <div id="launch_content">
-
-                </div>
-                <div id="launch_details">
-                    <div id="launch_details_left">
-                        <span id="launch_progress_label">0%</span>
-                    </div>
-                    <div id="launch_details_right">
-                        <progress id="launch_progress" value="22" max="100"></progress>
-                        <span id="launch_details_text" class="bot_label"><%- lang('landing.launchDetails') %></span>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>-->
