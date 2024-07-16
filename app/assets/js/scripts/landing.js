@@ -193,8 +193,7 @@ const refreshServerStatus = async (fade = false) => {
 function showLaunchFailure(title, desc){
     setOverlayContent(
         title,
-        desc,
-        Lang.queryJS('landing.launch.okay')
+        desc
     )
     setOverlayHandler(null)
     toggleOverlay(true)

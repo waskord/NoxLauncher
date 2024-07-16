@@ -6,14 +6,6 @@
 
 
 
-:root {
-    --gap-auth-fields: 15px;
-    --gap-auth-buttons: 15px;
-    --gap-auth-links: 10px;
-}
-
-
-
 #loginContainer {
     display: flex;
     flex-direction: column;

@@ -240,7 +240,7 @@ function createWindow() {
         maxHeight: 528,
         minHeight: 528,
         // Прозрачность (Для скругление) и отключение системного фрэйма
-        // transparent: true,
+        transparent: true,
         frame: false,
 
         webPreferences: {

@@ -1,0 +1,19 @@
+/*******************************************************************************
+ *                                                                             *
+ * Стили для настроек (settings.ejs)                                           *
+ *                                                                             *
+ ******************************************************************************/
+
+/* Main settings container. */
+#settingsContainer {
+    flex-direction: row;
+}
+
+/* Drop shadow displayed when content is scrolled out of view. */
+#settingsContainer:before {
+    opacity: 0;
+    transition: opacity 0.25s ease;
+}
+#settingsContainer[scrolled]:before {
+    opacity: 1;
+}

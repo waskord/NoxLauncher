@@ -127,29 +127,28 @@ async function toggleServerSelection(toggleState){
  * 
  * @param {string} title Overlay title text.
  * @param {string} description Overlay description text.
- * @param {string} acknowledge Acknowledge button text.
+ * @param {string} close overlayclose button text.
  * @param {string} dismiss Dismiss button text.
  */
-function setOverlayContent(title, description, acknowledge, dismiss = Lang.queryJS('overlay.dismiss')){
+function setOverlayContent(title, description, dismiss = Lang.queryJS('overlay.dismiss')){
     document.getElementById('overlayTitle').innerHTML = title
     document.getElementById('overlayDesc').innerHTML = description
-    document.getElementById('overlayAcknowledge').innerHTML = acknowledge
     document.getElementById('overlayDismiss').innerHTML = dismiss
 }
 
 /**
- * Set the onclick handler of the overlay acknowledge button.
+ * Set the onclick handler of the overlay overlayclose button.
  * If the handler is null, a default handler will be added.
  * 
  * @param {function} handler 
  */
 function setOverlayHandler(handler){
     if(handler == null){
-        document.getElementById('overlayAcknowledge').onclick = () => {
+        document.getElementById('overlayClose').onclick = () => {
             toggleOverlay(false)
         }
     } else {
-        document.getElementById('overlayAcknowledge').onclick = handler
+        document.getElementById('overlayClose').onclick = handler
     }
 }
 

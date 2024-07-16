@@ -141,7 +141,7 @@ function mojangErrorDisplayable(errorCode) {
  */
 exports.addMojangAccount = async function(username, password) {
     try {
-        const response = await MojangRestAPI.authenticate(username, password, '123123')
+        const response = await MojangRestAPI.authenticate(username, password, '0')
         console.log(username)
         console.log(password)
         console.log(ConfigManager.getClientToken())

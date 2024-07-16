@@ -1,5 +1,48 @@
 /*******************************************************************************
  *                                                                             *
- * Стили для overlay (overlat.ejs)                                             *
+ * Стили для overlay (overlay.ejs)                                             *
  *                                                                             *
  ******************************************************************************/
+
+#overlayContainer {
+    border-radius: var(--border-radius);
+    position: fixed;
+    z-index: 500;
+    top: var(--border-width);
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    width: calc(100% - var(--border-width) * 2);
+    height: calc(100% - var(--border-width) * 2);
+    background: rgba(0, 0, 0, 0.30);
+    flex-direction: column;
+ }
+
+.overlay {
+    width: 100%;
+    border-radius: 0 0 var(--border-radius) var(--border-radius);
+    padding: var(--padding-overlay-top) var(--padding-overlay) var(--padding-overlay) var(--padding-overlay);
+    background: var(--0);
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-end;
+ }
+
+.overlayFrame {
+    width: 100%;
+    height: 100%;
+    gap: var(--gap);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+}
+
+.overlayTitle {
+    font-family: var(--font-pixel-h2);
+    font-size: var(--font-size-pixel-h2);
+ }
+
+.overlayDesc {
+    color: var(--3);
+}

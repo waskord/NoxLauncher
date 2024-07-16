@@ -6,6 +6,7 @@
 
 /* Frame Bar */
 #frameBar {
+    width: -webkit-fill-available;
     position: relative;
     z-index: 100;
     display: flex;

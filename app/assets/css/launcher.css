@@ -33,6 +33,7 @@
 *::after,
 *::before {
     box-sizing: border-box;
+    -webkit-app-region: drag;
 }
 
  :root {
@@ -49,12 +50,21 @@
     --green: #1FAB60;
     --red: #ec1b49;
 
+
     --gap: 30px;
     --gap-brand: 8px;
     --gap-object-group: 10px;
 
+    --gap-auth-fields: 15px;
+    --gap-auth-buttons: 15px;
+    --gap-auth-links: 10px;
+
+    --padding-overlay-top: 20px;
+    --padding-overlay: 30px;
+
     --border-radius: 12px;
     --border-width: 2px;
+
 
     /* Шрифт текста в кнопке */
     --font-button: 'Montserrat SemiBold';
@@ -90,12 +100,12 @@
 
 
 
-    /* --font-pixel-h3: 'Retro Computer';
+    --font-pixel-h3: 'Retro Computer';
     --font-size-pixel-h3: 16px;
 
     --font-pixel-h2: 'Retro Computer';
     --font-size-pixel-h2: 17px;
-    */
+    
 
 
  }
@@ -121,7 +131,11 @@
     --default-disabled-button-text: var(--3); /* Цвет текста если кнопка отключена */
     --default-hover-button: #1F2020; /* Цвет при наведение на кнопку */
     --default-active-focus-button: #1B1C1B;  /* Цвет при нажатие*/
+
+    -webkit-app-region: no-drag !important;
  }
+ 
+ button *, input *, a * { -webkit-app-region: no-drag !important; }
 
 /*******************************************************************************
  *                                                                             *
@@ -234,7 +248,7 @@ a {
     padding: var(--padding-top-down) var(--padding-left-right);
     font-family: var(--font-text);
     font-size: var(--font-size-text);
-    border-radius: var(--border-radius) 0 0 var(--border-radius);
+    border-radius: var(--border-radius);
     background: var(--0);
     display: flex;
     width: -webkit-fill-available;
@@ -261,7 +275,7 @@ a {
 .selectionButton {
     height: 100%;
     box-sizing: border-box;
-    padding: var(--padding-top-down) var(--padding-left-right);
+    /*padding: var(--padding-top-down) var(--padding-left-right);*/
     font-family: var(--font-text);
     font-size: var(--font-size-text);
     display: flex;
@@ -284,7 +298,7 @@ a {
 
 /* Кнопка использующая только svg. По типу кнопок в фрейме */
 .svgButton {
-    height: -webkit-fill-available;
+    height: 100%;
     padding: 0 15px;
     background: none;
     border: none;

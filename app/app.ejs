@@ -6,31 +6,42 @@
     <script src="./assets/js/scripts/uibinder.js"></script>
     <link type="text/css" rel="stylesheet" href="./assets/css/old.css"> <!-- Основное (старое, что изначально было) -->
     <link type="text/css" rel="stylesheet" href="./assets/css/launcher.css"> <!-- Основное -->
-    <link type="text/css" rel="stylesheet" href="./assets/css/auth.css"> <!-- Авторизация (login.ejs) -->
+    <link type="text/css" rel="stylesheet" href="./assets/css/login.css"> <!-- Авторизация (login.ejs) -->
     <link type="text/css" rel="stylesheet" href="./assets/css/landing.css"> <!-- Главная страница (landing.ejs) -->
     <link type="text/css" rel="stylesheet" href="./assets/css/frame.css"> <!-- Фрэйм (frame.ejs) -->
+    <link type="text/css" rel="stylesheet" href="./assets/css/settings.css"> <!-- Настройки (settings.ejs) -->
+    <link type="text/css" rel="stylesheet" href="./assets/css/overlay.css"> <!-- Оверлей (overlay.ejs) -->
     <style>
         body {
             -webkit-user-select: none;
             height: 100%;
             width: 100%;
             overflow: hidden;
-
-            /*border-radius: var(--border-radius);
-            border: var(--1) solid 2px;*/
-            background-color: var(--0); 
         }
         #main {
             padding: 10px 30px 30px 30px;
             width: -webkit-fill-available;
             height: -webkit-fill-available;
             display: none;
-            position: absolute;
             z-index: 10;
+        }
+        .border-radius {    
+            display: flex;
+
+            width: 100%;
+            height: 100%;
+
+            border-radius: var(--border-radius);
+            border: var(--1) solid 2px;
+            background-color: var(--0);
+
+            flex-direction: column;
+            align-items: center;
         }
     </style>
 </head>
 <body>
+    <div class="border-radius">
     <%- include('frame') %>
     <div id="main">
         <%- include('landing') %>
@@ -39,6 +50,6 @@
         <%- include('waiting') %>
     </div>
     <%- include('overlay') %>
-
+    </div>
 </body>
 </html>

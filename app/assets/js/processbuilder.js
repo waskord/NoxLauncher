@@ -375,6 +375,7 @@ class ProcessBuilder {
         args.push('-Xms' + ConfigManager.getMinRAM(this.server.rawServer.id))
         args = args.concat(ConfigManager.getJVMOptions(this.server.rawServer.id))
         args.push('-Djava.library.path=' + tempNativePath)
+        args.push('-javaagent:authlib-injector.jar=ely.by')
 
         // Main Java Class
         args.push(this.modManifest.mainClass)
