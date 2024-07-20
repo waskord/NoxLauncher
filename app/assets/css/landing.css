@@ -5,9 +5,38 @@
  ******************************************************************************/
 
 .what {
-    content: 'Да, у landing нет своих личных стилей';
+    content: 'Да, у landing нет своих личных стилей (Ладно, они всё таки появились)';
 }
 
+
+/* Контейнер */
+.news {
+    gap: var(--gap-news);
+    border: var(--border-width) solid var(--1);
+    border-radius: var(--border-radius);
+    padding: var(--padding-news-container);
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+
+/* Заголовок */
+.newsTitle {
+    font-size: var(--font-size-pixel-h2);
+    font-family: var(--font-pixel-h2);
+}
+
+/* Новость */
+.newsText {
+    width: 100%;
+    display: flex;
+    color: var(--3);
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
 
 
 
