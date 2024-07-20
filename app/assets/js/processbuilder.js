@@ -2,8 +2,8 @@ const AdmZip                = require('adm-zip')
 const child_process         = require('child_process')
 const crypto                = require('crypto')
 const fs                    = require('fs-extra')
-const { LoggerUtil }        = require('helios-core')
-const { getMojangOS, isLibraryCompatible, mcVersionAtLeast }  = require('helios-core/common')
+const { LoggerUtil }        = require('noxenth-core')
+const { getMojangOS, isLibraryCompatible, mcVersionAtLeast }  = require('noxenth-core/common')
 const { Type }              = require('helios-distribution-types')
 const os                    = require('os')
 const path                  = require('path')
@@ -368,7 +368,7 @@ class ProcessBuilder {
 
         // Java Arguments
         if(process.platform === 'darwin'){
-            args.push('-Xdock:name=HeliosLauncher')
+            args.push('-Xdock:name=Noxenth Launcher')
             args.push('-Xdock:icon=' + path.join(__dirname, '..', 'images', 'minecraft.icns'))
         }
         args.push('-Xmx' + ConfigManager.getMaxRAM(this.server.rawServer.id))
