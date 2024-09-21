@@ -1,18 +1,18 @@
 # Custom Language File for Launcher Customizer
 
 [ejs.app]
-title = "Noxenth Launcher"
+title = "Compass Launcher"
 
 [ejs.landing]
-mediaGitHubURL = "https://github.com/Neckyyyy/NoxenthLauncher"
-mediaYouTubeURL = "https://www.youtube.com/@Noxenth"
-mediaDiscordURL = "https://discord.gg/USeACgVSPV"
+mediaGitHubURL = "https://github.com/notnq2gre/CompassLauncher"
+mediaYouTubeURL = "https://www.youtube.com/"
+mediaDiscordURL = "https://discord.gg/GU2UMhwZ"
 
 [ejs.settings]
-sourceGithubLink = "https://github.com/Neckyyyy/NoxenthLauncher"
-supportLink = "https://github.com/Neckyyyy/NoxenthLauncher/issues"
+sourceGithubLink = "https://github.com/notnq2gre/CompassLauncher"
+supportLink = "https://github.com/notnq2gre/CompassLauncher/issues"
 
 [ejs.welcome]
-welcomeHeader = "Добро пожаловать на Noxenth!"
-welcomeDescription = "Реализуйте свои инженерные и строительные проекты с помощью продвинутых технологий мода Create, Mekanism и других."
-welcomeDescCTA = "Вы в нескольких кликах от входа в этот мир."
+welcomeHeader = "Добро пожаловать в мир Compass!"
+welcomeDescription = "Реализуйте свои инженерные и строительные проекты с помощью продвинутых технологий различных модов в увлекательных режимах."
+welcomeDescCTA = "Вы в нескольких кликах от входа."
