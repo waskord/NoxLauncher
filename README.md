@@ -1,9 +1,9 @@
-<p align="center"><img src="https://i.imgur.com/n2WAuMj.png" width="150px" height="150px" alt="Compass Logo"></p>
+<p align="center"><img src="https://i.imgur.com/t8BQM7U.png" width="150px" height="150px" alt="Compass Logo"></p>
 
 <h1 align="center">CompassMC Launcher</h1>
 
-[<p align="center"><img src="https://img.shields.io/github/actions/workflow/status/dscalzi/HeliosLauncher/build.yml?branch=master&style=for-the-badge" alt="gh actions">](https://github.com/notnq2gre/CompassLauncher/actions) [<img src="https://img.shields.io/github/downloads/notnq2gre/CompassLauncher/total.svg?style=for-the-badge" alt="downloads">](https://github.com/notnq2gre/CompassLauncher/releases) <img src="https://forthebadge.com/images/badges/winter-is-coming.svg"  height="28px" alt="winter-is-coming"></p>
+[<p align="center"><img src="https://wsrv.nl/?url=https%3A%2F%2Fcdn.jsdelivr.net%2Fnpm%2F%40intergrav%2Fdevins-badges%403%2Fassets%2Fcozy-minimal%2Fsocial%2Fdiscord-plural_vector.svg&n=-1" alt="discord">](https://discord.gg/GU2UMhwZ) [<img src="https://wsrv.nl/?url=https%3A%2F%2Fcdn.jsdelivr.net%2Fnpm%2F%40intergrav%2Fdevins-badges%403%2Fassets%2Fcozy-minimal%2Fsocial%2Fyoutube-plural_vector.svg&n=-1" alt="downloads">](https://github.com/notnq2gre/CompassLauncher/releases) <img src="https://wsrv.nl/?url=https%3A%2F%2Fcdn.jsdelivr.net%2Fnpm%2F%40intergrav%2Fdevins-badges%403%2Fassets%2Fcozy-minimal%2Favailable%2Fmodrinth_vector.svg&n=-1" alt="modrinth">(https://modrinth.com/)</p>
 
 <p align="center">Не теряй времени на установку Java и сборки Compass. Лаунчер сделает это за тебя!</p>
 
-<h1 align="center">Страница в разработке.r</h1>
+<h1 align="center">Страница в разработке.</h1>
