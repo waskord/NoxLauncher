@@ -268,12 +268,11 @@ body, button {
 */
 
 #welcomeImageSeal {
-    border-radius: 50%;
-    border: 2px solid #cad7e1;
+    border-radius: 20%;
+    /* border: 2px solid #cad7e1; */
     background: rgba(1, 2, 1, 0.5);
     height: 125px;
     width: 125px;
-    box-shadow: 0px 0px 10px 0px rgb(0, 0, 0);
     margin-bottom: 5%;
     margin-top: 10%;
 }
@@ -481,12 +480,11 @@ body, button {
 
 /* Logo on login form. */
 #loginImageSeal {
-    border-radius: 50%;
-    border: 2px solid #cad7e1;
+    border-radius: 20%;
+    /* border: 2px solid #cad7e1; */
     background: rgba(1, 2, 1, 0.5);
     height: 125px;
     width: 125px;
-    box-shadow: 0px 0px 10px 0px rgb(0, 0, 0);
     margin-bottom: 20px;
 }
 
@@ -2853,9 +2851,7 @@ input:checked + .toggleSwitchSlider:before {
     height: 70px;
     width: auto;
     position: relative;
-    border: 2px solid white;
     box-sizing: border-box;
-    border-radius: 50%;
 }
 
 /* Logo container styles. */
@@ -2863,7 +2859,6 @@ input:checked + .toggleSwitchSlider:before {
     position: relative;
     height: 70px;
     width: 70px;
-    border-radius: 50%;
     margin-top: 50px;
 }
 
@@ -2965,13 +2960,12 @@ input:checked + .toggleSwitchSlider:before {
 
 /* User profile avatar container. */
 #avatarContainer {
-    border-radius: 50%;
-    border: 2px solid #cad7e1;
+    border-radius: 20%;
+    /* border: 2px solid #cad7e1; */
     box-sizing: border-box;
     background: rgba(1, 2, 1, 0.5);
     height: 70px;
     width: 70px;
-    box-shadow: 0px 0px 10px 0px rgb(0, 0, 0);
     overflow: hidden;
     position: relative;
     background-position: center;
@@ -3945,19 +3939,4 @@ input:checked + .toggleSwitchSlider:before {
     width: 280px;
     height: auto;
     z-index: 400;
-}
-
-/* Rotating animation for the spinner. */
-@keyframes rotating {
-    from {
-        transform: rotate(0deg);
-    }
-    to {
-        transform: rotate(360deg);
-    }
-}
-
-/* Class which is applied when the spinner image is spinning. */
-.rotating {
-    animation: rotating 10s linear infinite;
 }
