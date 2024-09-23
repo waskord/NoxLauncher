@@ -1,4 +1,4 @@
-<p align="center"><img src="https://i.imgur.com/t8BQM7U.png" width="150px" height="150px" alt="Compass Logo"></p>
+<p align="center"><img src="https://i.imgur.com/ClgkwI6.png" width="150px" height="150px" alt="Compass Logo"></p>
 
 <h1 align="center">CompassMC Launcher</h1>
 
