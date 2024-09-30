@@ -126,7 +126,7 @@ ipcMain.on(MSFT_OPCODE.OPEN_LOGIN, (ipcEvent, ...arguments_) => {
     msftAuthViewOnClose = arguments_[1]
     msftAuthWindow = new BrowserWindow({
         title: LangLoader.queryJS('index.microsoftLoginTitle'),
-        backgroundColor: '#222222',
+        backgroundColor: '#111113',
         width: 520,
         height: 600,
         frame: true,
@@ -228,7 +228,11 @@ function createWindow() {
 
     win = new BrowserWindow({
         width: 980,
+        maxWidth: 980,
+        minWidth: 980,
         height: 552,
+        maxHeight: 552,
+        minHeight: 552,
         icon: getPlatformIcon('Logo'),
         frame: false,
         webPreferences: {
@@ -236,7 +240,7 @@ function createWindow() {
             nodeIntegration: true,
             contextIsolation: false
         },
-        backgroundColor: '#171614'
+        backgroundColor: '#111113'
     })
     remoteMain.enable(win.webContents)
 

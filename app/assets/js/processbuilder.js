@@ -2,8 +2,8 @@ const AdmZip                = require('adm-zip')
 const child_process         = require('child_process')
 const crypto                = require('crypto')
 const fs                    = require('fs-extra')
-const { LoggerUtil }        = require('noxenth-core')
-const { getMojangOS, isLibraryCompatible, mcVersionAtLeast }  = require('noxenth-core/common')
+const { LoggerUtil }        = require('compassmc-core')
+const { getMojangOS, isLibraryCompatible, mcVersionAtLeast }  = require('compassmc-core/common')
 const { Type }              = require('helios-distribution-types')
 const os                    = require('os')
 const path                  = require('path')
@@ -368,13 +368,14 @@ class ProcessBuilder {
 
         // Java Arguments
         if(process.platform === 'darwin'){
-            args.push('-Xdock:name=HeliosLauncher')
+            args.push('-Xdock:name=CompassLauncher')
             args.push('-Xdock:icon=' + path.join(__dirname, '..', 'images', 'minecraft.icns'))
         }
         args.push('-Xmx' + ConfigManager.getMaxRAM(this.server.rawServer.id))
         args.push('-Xms' + ConfigManager.getMinRAM(this.server.rawServer.id))
         args = args.concat(ConfigManager.getJVMOptions(this.server.rawServer.id))
         args.push('-Djava.library.path=' + tempNativePath)
+        args.push('-javaagent:authlib-injector.jar=ely.by')
 
         // Main Java Class
         args.push(this.modManifest.mainClass)
@@ -419,7 +420,7 @@ class ProcessBuilder {
 
         // Java Arguments
         if(process.platform === 'darwin'){
-            args.push('-Xdock:name=HeliosLauncher')
+            args.push('-Xdock:name=CompassLauncher')
             args.push('-Xdock:icon=' + path.join(__dirname, '..', 'images', 'minecraft.icns'))
         }
         args.push('-Xmx' + ConfigManager.getMaxRAM(this.server.rawServer.id))

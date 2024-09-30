@@ -6,18 +6,18 @@ const { URL }                 = require('url')
 const {
     MojangRestAPI,
     getServerStatus
-}                             = require('noxenth-core/mojang')
+}                             = require('compassmc-core/mojang')
 const {
     RestResponseStatus,
     isDisplayableError,
     validateLocalFile
-}                             = require('noxenth-core/common')
+}                             = require('compassmc-core/common')
 const {
     FullRepair,
     DistributionIndexProcessor,
     MojangIndexProcessor,
     downloadFile
-}                             = require('noxenth-core/dl')
+}                             = require('compassmc-core/dl')
 const {
     validateSelectedJvm,
     ensureJavaDirIsRoot,
@@ -25,7 +25,7 @@ const {
     discoverBestJvmInstallation,
     latestOpenJDK,
     extractJdk
-}                             = require('noxenth-core/java')
+}                             = require('compassmc-core/java')
 
 // Internal Requirements
 const DiscordWrapper          = require('./assets/js/discordwrapper')
@@ -148,7 +148,7 @@ function updateSelectedAccount(authUser){
             username = authUser.displayName
         }
         if(authUser.uuid != null){
-            document.getElementById('avatarContainer').style.backgroundImage = `url('https://mc-heads.net/avatar/${authUser.uuid}')`
+            document.getElementById('avatarContainer').style.backgroundImage = `url('https://ely.by/services/skins-renderer?url=http://skinsystem.ely.by/skins/${authUser.displayName}.png&scale=18.9&renderFace=1')`
         }
     }
 }

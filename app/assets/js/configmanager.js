@@ -1,5 +1,5 @@
 const fs   = require('fs-extra')
-const { LoggerUtil } = require('noxenth-core')
+const { LoggerUtil } = require('compassmc-core')
 const os   = require('os')
 const path = require('path')
 

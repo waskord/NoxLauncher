@@ -1,5 +1,5 @@
 // Work in progress
-const { LoggerUtil } = require('noxenth-core')
+const { LoggerUtil } = require('compassmc-core')
 
 const logger = LoggerUtil.getLogger('DiscordWrapper')
 

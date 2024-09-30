@@ -6,9 +6,9 @@ const path           = require('path')
 const ConfigManager  = require('./configmanager')
 const { DistroAPI }  = require('./distromanager')
 const LangLoader     = require('./langloader')
-const { LoggerUtil } = require('noxenth-core')
+const { LoggerUtil } = require('compassmc-core')
 // eslint-disable-next-line no-unused-vars
-const { HeliosDistribution } = require('noxenth-core/common')
+const { HeliosDistribution } = require('compassmc-core/common')
 
 const logger = LoggerUtil.getLogger('Preloader')
 

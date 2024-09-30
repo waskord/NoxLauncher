@@ -10,10 +10,10 @@
  */
 // Requirements
 const ConfigManager          = require('./configmanager')
-const { LoggerUtil }         = require('noxenth-core')
-const { RestResponseStatus } = require('noxenth-core/common')
-const { MojangRestAPI, MojangErrorCode } = require('noxenth-core/mojang')
-const { MicrosoftAuth, MicrosoftErrorCode } = require('noxenth-core/microsoft')
+const { LoggerUtil }         = require('compassmc-core')
+const { RestResponseStatus } = require('compassmc-core/common')
+const { MojangRestAPI, MojangErrorCode } = require('compassmc-core/mojang')
+const { MicrosoftAuth, MicrosoftErrorCode } = require('compassmc-core/microsoft')
 const { AZURE_CLIENT_ID }    = require('./ipcconstants')
 const Lang = require('./langloader')
 
@@ -141,7 +141,10 @@ function mojangErrorDisplayable(errorCode) {
  */
 exports.addMojangAccount = async function(username, password) {
     try {
-        const response = await MojangRestAPI.authenticate(username, password, ConfigManager.getClientToken())
+        const response = await MojangRestAPI.authenticate(username, password, '0')
+        console.log(username)
+        console.log(password)
+        console.log(ConfigManager.getClientToken())
         console.log(response)
         if(response.responseStatus === RestResponseStatus.SUCCESS) {
 
