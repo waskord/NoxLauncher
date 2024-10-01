@@ -8,11 +8,6 @@
  ******************************************************************************/
 
 @font-face {
-    font-family: 'Unbounded';
-    src: url('../fonts/Unbounded-VariableFont_wght.ttf');
-}
-
-@font-face {
     font-family: 'Montserrat';
     src: url('../fonts/Montserrat-VariableFont_wght.ttf');
 }
@@ -37,7 +32,7 @@ p {
 
 /* Set default font and color. */
 body, button {
-    font-family: 'Unbounded';
+    font-family: 'Montserrat';
     color: white;
 }
 
@@ -245,7 +240,7 @@ body, button {
     text-align: center;
     color: white;
     margin-bottom: 25px;
-    letter-spacing: 1px;
+    /* letter-spacing: 1px; */
     font-size: 20px;
     text-shadow: white 0px 0px 0px;
 }
@@ -267,8 +262,8 @@ body, button {
 /* Login button styles. */
 #welcomeButton {
     background: none;
-    font-weight: bold;
-    letter-spacing: 2px;
+    font-weight: 300;
+    /* letter-spacing: 2px; */
     border: none;
     padding: 15px 5px;
     margin: 10px 0px;
@@ -446,7 +441,7 @@ body, button {
     font-family: 'Montserrat';
     margin-bottom: 25px;
     font-size: 18px;
-    letter-spacing: 1px;
+    /* letter-spacing: 1px; */
     font-weight: bold;
 }
 
@@ -554,7 +549,7 @@ body, button {
 #loginButton {
     background: none;
     font-weight: bold;
-    letter-spacing: 2px;
+    /* letter-spacing: 2px; */
     border: none;
     padding: 15px 5px;
     margin: 10px 0px;
@@ -1235,7 +1230,7 @@ body, button {
     background: rgba(0, 0, 0, 0.25);
     border-radius: 3px;
     border: 1px solid rgba(126, 126, 126, 0.57);
-    font-family: 'Unbounded';
+    font-family: 'Montserrat';
     transition: 0.25s ease;
 }
 #settingsContainer input[type=number]:focus,
@@ -1297,10 +1292,10 @@ body, button {
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: rgba(255, 255, 255, 0.35);
+    background-color: rgba(255, 255, 255, 0.651);
     transition: .4s;
     border-radius: 50px;
-    border: 1px solid rgba(126, 126, 126, 0.57);
+    border: 2px solid rgba(126, 126, 126, 0.342);
 }
 .toggleSwitchSlider:before {
     position: absolute;
@@ -1308,16 +1303,13 @@ body, button {
     height: 13px;
     width: 16px;
     left: 3px;
-    bottom: 3px;
     background-color: white;
-    box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.75);
     border-radius: 50px;
     transition: .4s;
 }
 input:checked + .toggleSwitchSlider {
-    background-color: rgb(31, 140, 11);
-    /* box-shadow: inset 2px 1px 20px black; */
-    border: 1px solid rgb(31, 140, 11);
+    background-color: rgb(113, 201, 55);
+    border: 2px solid rgb(86, 145, 47);
 }
 input:checked + .toggleSwitchSlider:before {
     transform: translateX(15px);
@@ -1334,7 +1326,7 @@ input:checked + .toggleSwitchSlider:before {
 }
 .rangeSliderBar {
     position: absolute;
-    background: #8be88b;
+    background: rgb(103, 214, 29);
     width: 50%;
     height: 5px;
     border-radius: 3px 0px 0px 3px;
@@ -1544,7 +1536,7 @@ input:checked + .toggleSwitchSlider:before {
     margin-top: 20px;
     font-size: 18px;
     font-weight: 500;
-    font-family: 'Unbounded';
+    font-family: 'Montserrat';
 }
 .settingsAuthAccountDetailValue {
     font-size: 12px;
@@ -2237,7 +2229,7 @@ input:checked + .toggleSwitchSlider:before {
     background-color: rgba(255, 255, 255, 0.25);
     color: white;
     border-radius: 3px;
-    font-family: 'Unbounded';
+    font-family: 'Montserrat';
 }
 .settingsChangelogText li+li {
     margin-top: .25em;
@@ -2954,7 +2946,7 @@ input:checked + .toggleSwitchSlider:before {
     align-items: center;
     transition: 0.25s ease;
     font-weight: bold;
-    letter-spacing: 2px;
+    /* letter-spacing: 2px; */
     background-color: rgba(0, 0, 0, 0.25);
     -webkit-user-select: none;
     border: none;
@@ -2976,10 +2968,11 @@ input:checked + .toggleSwitchSlider:before {
     position: relative;
     display: flex;
     flex-direction: column;
-    margin-top: 25px;
-    height: calc(100% - 95px);
-    width: 70px;
+    margin-top: 20px;
+    /* height: calc(100% - 95px); */
+    /* width: 70px; */
     align-items: center;
+    margin-left: 32px;
 }
 
 /* Social Media Icon division containers. */
@@ -2993,13 +2986,13 @@ input:checked + .toggleSwitchSlider:before {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 27px;
+    height: 35px;
 }
 
 /* Divider bar between the external and internal icons. */
 .mediaDivider {
     height: 2px;
-    width: 14px;
+    width: 18px;
     background: rgb(255, 255, 255);
     margin: 10px 0px;
 }
@@ -3007,11 +3000,11 @@ input:checked + .toggleSwitchSlider:before {
 /* Social media icon shared styles. */
 .mediaSVG {
     fill: #ffffff;
-    height: 12px;
+    height: 18px;
     transition: 0.25s ease;
     cursor: pointer;
-    height: 12px;
-    width: 25px;
+    height: 18px;
+    width: 28px;
 }
 .mediaSVG:hover,
 .mediaURL:focus .mediaSVG,
@@ -3041,12 +3034,12 @@ input:checked + .toggleSwitchSlider:before {
 /* Settings icon colors. */
 #settingsSVG {
     stroke: #ffffff;
-    height: 15px;
+    height: 18px;
 }
 .mediaButton:hover #settingsSVG,
 .mediaButton:focus #settingsSVG,
 .mediaButton:active #settingsSVG {
-    height: 23px;
+    height: 20px;
 }
 
 /* Settings tooltip styles. */
@@ -3129,7 +3122,7 @@ input:checked + .toggleSwitchSlider:before {
 /* Style for a general label on the bottom of the landing view. */
 .bot_label {
     font-size: 9px;
-    letter-spacing: 1px;
+    /* letter-spacing: 1px; */
     font-weight: bold;
     text-shadow: 0px 0px 0px #bebcbb;
 }
@@ -3178,7 +3171,7 @@ input:checked + .toggleSwitchSlider:before {
     border: none;
     cursor: pointer;
     font-weight: 900;
-    letter-spacing: 2px;
+    /* letter-spacing: 2px; */
     text-shadow: 0px 0px 0px #bebcbb;
     font-size: 20px;
     padding: 0px;
@@ -3214,7 +3207,7 @@ input:checked + .toggleSwitchSlider:before {
 /* Span which displays percentage complete. */
 #launch_progress_label {
     font-weight: 900;
-    letter-spacing: 1px;
+    /* letter-spacing: 1px; */
     text-shadow: 0px 0px 0px #bebcbb;
     font-size: 20px;
     min-width: 53.21px;
@@ -3339,7 +3332,7 @@ input:checked + .toggleSwitchSlider:before {
     font-family: 'Montserrat';
     font-size: 20px;
     font-weight: bold;
-    letter-spacing: 1px;
+    /* letter-spacing: 1px; */
     -webkit-user-select: initial;
 }
 
