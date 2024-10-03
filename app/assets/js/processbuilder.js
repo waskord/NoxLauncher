@@ -375,7 +375,6 @@ class ProcessBuilder {
         args.push('-Xms' + ConfigManager.getMinRAM(this.server.rawServer.id))
         args = args.concat(ConfigManager.getJVMOptions(this.server.rawServer.id))
         args.push('-Djava.library.path=' + tempNativePath)
-        args.push('-javaagent:authlib-injector-1.2.5.jar=ely.by')
 
         // Main Java Class
         args.push(this.modManifest.mainClass)
@@ -432,6 +431,11 @@ class ProcessBuilder {
 
         // Vanilla Arguments
         args = args.concat(this.vanillaManifest.arguments.game)
+
+        // Ely.by Auth
+        args.push('-javaagent:authlib-injector.jar=ely.by')
+
+
 
         for(let i=0; i<args.length; i++){
             if(typeof args[i] === 'object' && args[i].rules != null){
